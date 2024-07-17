@@ -4,6 +4,30 @@ import Navbar from './Navbar';
 const Ai = () => {
   useEffect(() => {
 
+    const validateDetails = (name, age, days, language, question) => {
+      document.getElementById("output_prompt").textContent = "";
+      if (name.length <= 1) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nName length > 2 letter.";
+        return false;
+      }
+      if (age <= 5) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nAge > 5.";
+        return false;
+      }
+      if (days <= 0) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nDays > 0.";
+        return false; 
+      }
+      if (language.length <= 0) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nLanguage Name Length > 0.";
+        return false;
+      }
+      if (question.length <= 0) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nAsk the Problem i.e, Prompt Length > 0.";
+        return false;
+      }
+      return true;};
+
     const formatMarkdown = (text) => {
       // Bold ()
       text = text.replace(/\\(\*.*?\*)\\/g, "<strong>$1</strong>");
@@ -39,12 +63,19 @@ const Ai = () => {
     };
 
     const answer = async () => {
+      const User = document.getElementById("input_name").value;
+      const age = document.getElementById("input_age").value;
+      const level = document.getElementById("input_level").value;
+      const days = document.getElementById("input_day").value;
+      const language = document.getElementById("input_language").value;
       const question = document.getElementById("input_prompt").value;
-      const User = "Rana";
+      // const User = "Rana";
       document.getElementById("output_prompt").textContent = "Typing...";
       document.getElementById("input_prompt").value = "";
+      if (validateDetails(User,age,days,language,question) == true) {
+        document.getElementById("output_prompt").textContent = "Typing...";
       try {
-        const response = await fetch("http://localhost:8080/ai/ans", {
+        const response = await fetch("https://sparkv-server.onrender.com/ai/ans", {
           method: "POST",
           headers: {
 
@@ -59,6 +90,10 @@ const Ai = () => {
         console.error("Error:", error);
         document.getElementById("output_prompt").textContent = "An error occurred.";
       }
+    // } else {
+    //   document.getElementById("output_prompt").textContent = "Please fill all the details correctly...\nName Length > 2 letter,\nAge > 5,\nDays > 0,\nLanguage Name Length > 0.";
+    }
+
     };
 
     document.getElementById('sendButton').addEventListener('click', answer);
@@ -71,9 +106,9 @@ const Ai = () => {
 
   return (
     <div>
-      <div><Navbar /></div>
       <div className="aiPage">
-        <div className="">
+      <div><Navbar /></div>
+        <div>
           <h1 className="aiPage_head display-4">SparkV ChatBot</h1>
         </div>
         <div className="d-flex">
@@ -88,8 +123,20 @@ const Ai = () => {
             <div className="bg-secondary rounded shadow-lg ai_win">
               <p id="output_prompt" className="container rounded p-5 shadow-lg mb-2"></p>
               <div className="container input-container rounded">
-                <input type="text" id="input_prompt" placeholder="Ask your query..." className="mt-3" />
-                <button id="sendButton" className="send-button btn ">»</button>
+                <input type="text" id="input_name" name="input_name" placeholder="Enter your name" className="mt-3 px-2"/>
+                <input type="number" id="input_day" name="input_day" placeholder="Days" className="mt-3 px-2"/>
+                <input type="number" id="input_age" name="input_age" placeholder="Age" className="mt-3 px-2"/>
+                <select id="input_level" name="input_level" class="custom-select" placeholder="--">
+                  <option value="option1" style={{color:'grey',fontStyle:'italic',fontSize:'0.9em'}}>&nbsp;Your Level</option>
+                  <option value="option2" style={{color:'red',fontStyle:'italic',fontSize:'0.9em'}}>&nbsp;Beginner</option>
+                  <option value="option3" style={{color:'blue',fontStyle:'italic',fontSize:'0.9em'}}>&nbsp;Intermediate</option>
+                  <option value="option4" style={{color:'green',fontStyle:'italic',fontSize:'0.9em'}}>&nbsp;Advance</option>
+                </select>
+                <input type="text" id="input_language" name="input_language" placeholder="Language you want to learn" className="mt-3 px-2"/>
+                <div class="input_bar">
+                  <input type="text" id="input_prompt" placeholder="Ask your query..." className="mt-3" />
+                  <button id="sendButton" className="send-button btn ">»</button>
+                </div>
               </div>
             </div>
           </main>

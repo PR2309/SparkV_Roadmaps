@@ -1702,19 +1702,23 @@ a {
     background-image: radial-gradient(#0d131b, #1F2833, #0d131b);
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 .aiPage_head{
-    background-image: linear-gradient(to bottom right, rgb(244, 151, 151), #e44848);
+    /* background-image: linear-gradient(to bottom right, rgb(244, 151, 151), #e44848); */
+    background-image: linear-gradient(to bottom right, rgb(244, 151, 151), #e44848, #ff6600, #ffcc00);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding-top: 1rem;
+    margin-top: 0rem;
+    padding-top: 0.2rem;
     padding-left: 2rem;
     text-wrap: nowrap;
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 0.2rem;
 }
 .history {
     padding:0.5rem;
@@ -1751,16 +1755,64 @@ a {
     padding-bottom: 0.1rem !important;
 }
 
+#input_age{
+  border:none;
+  border-radius: 2em 2em 2em 2em;
+  margin:0.8rem 1rem 2px 0;
+  height: 4vh;
+  width: 3.7rem;
+}
+
+#input_day{
+  border:none;
+  border-radius: 2em 2em 2em 2em;
+  margin:0.8rem 1rem 2px 0;
+  height: 4vh;
+  width: 4rem;
+}
+
+#input_name{
+  border:none;
+  border-radius: 2em 2em 2em 2em;
+  margin:0.8rem 1rem 2px 0;
+  height: 4vh;
+  width: 10rem;
+}
+
+#input_language{
+  border:none;
+  border-radius: 2em 2em 2em 2em;
+  margin:0.8rem 1rem 2px 0;
+  height: 4vh;
+  width: 14rem;
+}
+
+#input_level{
+  border:none;
+  border-radius: 2em 2em 2em 2em;
+  margin:0.8rem 1rem 2px 0;
+  height: 4vh;
+  width: 7.2rem;
+  color: grey; /* Set default text color */
+
+}
+
 .input-container {
     /* background-color: #C5C6C7; */
     background-color: #c5c6c7cc;
 
     padding-bottom: 13px;
     margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: row; */
+}
+.input_bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 #input_prompt {
@@ -1773,15 +1825,21 @@ a {
     width: 60vw;
 }
 
-#input_prompt:hover::placeholder {
+#input_level:hover{font-style: italic;}
+#input_language:hover::placeholder,
+#input_name:hover::placeholder,
+#input_day:hover::placeholder,
+#input_prompt:hover::placeholder,
+#input_age:hover::placeholder {
     font-style: italic;
     font-size: 0.9em;
 }
 
 #output_prompt {
     padding: 0.8rem;
-    height: 50vh;
+    height: 40vh;
     overflow-y: auto;
+    margin-bottom: 1rem;
 }
 
 /* Scrol bar */

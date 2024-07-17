@@ -32,7 +32,7 @@ const Navbar = () => {
         <a id="opt2" className="opt btn text-light mt-3 mb-3" href="/language">Roadmaps</a>
         <a id="opt3" className="opt btn text-light mt-3 mb-3" href="/about">About Us</a>
         {loggedInUser ? (
-        <a href="/"id="opt4" className="opt btn text-light mt-3 mb-3" data-bs-toggle="modal"
+        <a href="/" id="opt4" className="opt btn text-light mt-3 mb-3" data-bs-toggle="modal"
           data-bs-target="#exampleModal">Logout</a>
           ) : null}
         <a id="opt5" className="opt btn text-light mt-3 mb-3" href="/ai"><span id="navbar_ai">֍</span></a>
