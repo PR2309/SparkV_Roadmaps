@@ -10,8 +10,8 @@ const Ai = () => {
         document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nName length > 2 letter.";
         return false;
       }
-      if (age <= 5) {
-        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nAge > 5.";
+      if (age <= 8) {
+        document.getElementById("output_prompt").textContent += "Please fill all the details correctly...\nAge > 8.";
         return false;
       }
       if (days <= 0) {
@@ -72,7 +72,7 @@ const Ai = () => {
       // const User = "Rana";
       document.getElementById("output_prompt").textContent = "Typing...";
       document.getElementById("input_prompt").value = "";
-      if (validateDetails(User,age,days,language,question) == true) {
+      // if (validateDetails(User,age,days,language,question) == true) {
         document.getElementById("output_prompt").textContent = "Typing...";
       try {
         const response = await fetch("https://sparkv-server.onrender.com/ai/ans", {
@@ -81,7 +81,7 @@ const Ai = () => {
 
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name: User, problem: question }),
+          body: JSON.stringify({ name: User, age: age, level: level, days: days, language:language, problem: question }),
         });
         const data = await response.json();
         document.getElementById("output_prompt").innerHTML = formatMarkdown(data.letter);
@@ -91,8 +91,8 @@ const Ai = () => {
         document.getElementById("output_prompt").textContent = "An error occurred.";
       }
     // } else {
-    //   document.getElementById("output_prompt").textContent = "Please fill all the details correctly...\nName Length > 2 letter,\nAge > 5,\nDays > 0,\nLanguage Name Length > 0.";
-    }
+    //   document.getElementById("output_prompt").textContent = "Please fill all the details correctly...\nName Length > 2 letter,\nAge > 8,\nDays > 0,\nLanguage Name Length > 0.";
+    // }
 
     };
 

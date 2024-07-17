@@ -67,10 +67,13 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 8080;
 
+/* AI  */
 // Function to run the AI model
-async function run(name, problem) {
+async function run(name,age,level,days,language, problem) {
+// async function run(name, problem) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const prompt = `You are an assistant for a Roadmap Website named SparkV. I am a user named ${name} and I want you to write a roadmap for me if ${problem}`;
+    const prompt = `Your are a friendly assistant for a Roadmap Website named SparkV. I am a user named ${name}, having age ${age}, I am at ${level} level in ${language}, I have ${days}, Provide a roadmap customised according to the data I provided, if ${problem}, In JSON format.  do not include any other symbol like ' and * `;
+    // const prompt = `You are an assistant for a Roadmap Website named SparkV. I am a user named ${name} and I want you to write a roadmap for me if ${problem}`;
     console.log("Question: " + prompt);
     
     try {
@@ -85,7 +88,6 @@ async function run(name, problem) {
 }
 
 // API route for generating AI responses
-app.use('/api', router);
 app.post('/ai/ans', async (req, res) => {
     const { name, problem } = req.body;
     try {
@@ -96,6 +98,19 @@ app.post('/ai/ans', async (req, res) => {
         res.status(500).send('An error occurred');
     }
 });
+
+/*********************************************** */
+app.use('/api', router);
+// app.post('/ai/ans', async (req, res) => {
+//     const { name, problem } = req.body;
+//     try {
+//         const letter = await run(name, problem);
+//         res.json({ letter });
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).send('An error occurred');
+//     }
+// });
 
 // Connect to the database and start the server
 connectDB().then(() => {
