@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -22,7 +22,7 @@ const LandingPage = () => {
             <img src="/Logo_.png" alt="SparkV" className="text-shadow py-2 pt-5" height="300rem"/>
           </div>
           <footer className="lower">
-            <a href="/signup"><button className="custom-button rounded bg-secondary bg-gradient" title="Login">Let's Go</button></a>
+            <Link to="/signup"><button className="custom-button rounded bg-secondary bg-gradient" title="Login">Let's Go</button></Link>
             <img src="/tree_.png" style={{ marginTop: '2.5rem', height:'200px' }} alt="Tree"/>
           </footer>
         </section>
