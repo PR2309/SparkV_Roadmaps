@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { handleError, handleSuccess } from '../util';
 import { useNavigate } from 'react-router-dom';
-
+import {Link} from 'react-router-dom';
 const SignUp = () => {
     const [signupInfo, setSignInfo] = useState({
         name: '',
@@ -113,7 +113,7 @@ const SignUp = () => {
                         <button type="submit" className="signup-button register-btn btn rounded btn-primary" title="Signup">Register</button>
                     </form>
                 </div>
-                <p>Already have an account?&nbsp;<a href="/login" className="login-link">Log in</a></p>
+                <p>Already have an account?&nbsp;<Link to="/login" className="login-link">Log in</Link></p>
             </div>
             <ToastContainer />
         </div>

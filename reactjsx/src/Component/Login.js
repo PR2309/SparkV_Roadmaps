@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import { handleError, handleSuccess } from '../util';
 import { ToastContainer } from 'react-toastify';
-
+import {Link} from 'react-router-dom';
 const Login = () => {
     const [loginInfo, setLoginInfo] = useState({
         email: '',
@@ -86,7 +86,7 @@ const Login = () => {
                     <input type="checkbox" className="checkbox-input" />Remember me
                 </span>
                 <span className="forgot-pass">
-                    <a href="/" className="forgot-pass-link">Forgot Password?</a>
+                    <Link to="/" className="forgot-pass-link">Forgot Password?</Link>
                 </span>
             </div>
             <div className="login-actions">
@@ -100,7 +100,7 @@ const Login = () => {
                         Log In
                     </button>
                 </form>
-                <p>Don't have an account? <a href="/signup" className="signup-link">Sign Up</a></p>
+                <p>Don't have an account? <Link to="/signup" className="signup-link">Sign Up</Link></p>
             </div>
             <ToastContainer />
         </div>

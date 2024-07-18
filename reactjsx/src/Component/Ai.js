@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from './Navbar';
-
+import {Link} from 'react-router-dom';
 const Ai = () => {
   useEffect(() => {
 
@@ -72,7 +72,7 @@ const Ai = () => {
       // const User = "Rana";
       document.getElementById("output_prompt").textContent = "Typing...";
       document.getElementById("input_prompt").value = "";
-      // if (validateDetails(User,age,days,language,question) == true) {
+      if (validateDetails(User,age,days,language,question) == true) {
         document.getElementById("output_prompt").textContent = "Typing...";
       try {
         // const response = await fetch("http://localhost:3004/ai/ans", {
@@ -93,7 +93,7 @@ const Ai = () => {
       }
     // } else {
     //   document.getElementById("output_prompt").textContent = "Please fill all the details correctly...\nName Length > 2 letter,\nAge > 8,\nDays > 0,\nLanguage Name Length > 0.";
-    // }
+    }
 
     };
 
@@ -120,8 +120,8 @@ const Ai = () => {
               <div id="history_list"></div>
             </div>
           </aside>
-          <main className="chatWindow col-9 px-2 pt-3 container rounded shadow-lg" style={{ margin: '2%' }}>
-            <div className="bg-secondary rounded shadow-lg ai_win">
+          <main id="output_prom pt" className="chatWindow col-9 px-2 pt-3 container rounded shadow-lg" style={{ margin: '2%' }}>
+            <div className="ai_win container bg-secondary rounded shadow-lg">
               <p id="output_prompt" className="container rounded p-5 shadow-lg mb-2"></p>
               <div className="container input-container rounded">
                 <input type="text" id="input_name" name="input_name" placeholder="Enter your name" className="mt-3 px-2"/>
@@ -136,19 +136,18 @@ const Ai = () => {
                 <input type="text" id="input_language" name="input_language" placeholder="Language you want to learn" className="mt-3 px-2"/>
                 <div class="input_bar">
                   <input type="text" id="input_prompt" placeholder="Ask your query..." className="mt-3" />
-                  <button id="sendButton" className="send-button btn ">»</button>
+                  <button id="sendButton" className="send-button btn ">
+                    <span class="rotate-text">➣</span>
+                  </button>
                 </div>
               </div>
             </div>
           </main>
         </div>
-        <footer className="roadmapfooter">
-    &copy;2024 All rights reserved to SparkV   
-
-    </footer>        
       </div>
-      
-
+      <footer className="roadmapfooter">
+        &copy;2024 All rights reserved to SparkV   
+      </footer>   
     </div>
   );
 };

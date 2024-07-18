@@ -72,7 +72,9 @@ const PORT = process.env.PORT || 3004;
 async function run(name,age,level,days,language, problem) {
 // async function run(name, problem) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const prompt = `Your are a friendly assistant for a Roadmap Website named SparkV. I am a user named ${name}, having age ${age}, I am at ${level} level in ${language}, I have ${days}, Provide a roadmap customised according to the data I provided, if ${problem}, In JSON format.`;
+    const prompt = `You are a friendly assistant for a Roadmap Website named SparkV. I am a user named ${name}, having age ${age}. I am at ${level} level in ${language}. I have ${days} days to learn. Provide a customized roadmap according to the data I provided. If there is any specific problem, address it. Please respond in JSON format.
+`
+    // const prompt = `You are a friendly assistant for a Roadmap Website named SparkV. I am a user named ${name}, having age ${age}, I am at ${level} level in ${language}, I have ${days}, Provide a roadmap customised according to the data I provided, if ${problem}, In JSON format.`;
     // const prompt = `You are an assistant for a Roadmap Website named SparkV. I am a user named ${name} and I want you to write a roadmap for me if ${problem}`;
     console.log("Question: " + prompt);
     

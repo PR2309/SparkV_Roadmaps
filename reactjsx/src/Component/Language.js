@@ -193,6 +193,15 @@ const Language = () => {
 						</div>
 
 						<div>
+							<Link to="/Language/json" className="nav-link">
+								<div className="cards">
+									<i class="bi bi-braces" style={{ marginRight: '10px' }}></i>
+									<h2 className="icon-name">JSON</h2>
+								</div>
+							</Link>
+						</div>
+
+						<div>
 							<Link to="/Language/dsa" className="nav-link">
 								<div className="cards">
 									<h2 className="icon-name">DSA</h2>
@@ -252,14 +261,6 @@ const Language = () => {
 							<Link to="/Language/typescript" className="nav-link">
 								<div className="cards">
 									<h2 className="icon-name">TypeScript</h2>
-								</div>
-							</Link>
-						</div>
-
-						<div>
-							<Link to="/Language/json" className="nav-link">
-								<div className="cards">
-									<h2 className="icon-name">JSON</h2>
 								</div>
 							</Link>
 						</div>
