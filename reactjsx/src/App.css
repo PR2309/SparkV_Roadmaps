@@ -1461,7 +1461,7 @@ a {
 }
 
 .why img:hover {
-  scale: 1.07;
+  scale: 1.02;
 }
 
 .vision {
@@ -1478,7 +1478,7 @@ a {
 }
 
 .vision div:hover {
-  scale: 1.07;
+  scale: 1.02;
 }
 
 .vision img {
@@ -1490,7 +1490,7 @@ a {
 }
 
 .vision img:hover {
-  scale: 1.07;
+  scale: 1.02;
 }
 
 /* .vision h2 {

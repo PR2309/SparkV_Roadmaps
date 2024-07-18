@@ -25,7 +25,7 @@ const Homepage = () => {
 							{" "}
 							<i>
 								Discover your path to success with SparkV's expertly designed
-								roadmaps. Here, we’re committed to transforming you from a coding novice to a true virtuoso. Our promise? Mastery of any language you choose. But remember, the secret ingredient lies in unwavering discipline on this journey. So buckle up, my friend, and let’s craft your coding saga!
+								roadmaps. Here, we’re committed to transforming you from a coding novice to a true virtuoso. Our promise! Mastery of any language you choose. But remember, the secret ingredient lies in unwavering discipline on this journey. So buckle up, my friend, and let’s craft your coding saga!
 							</i>
 						</h4>
 					</p>

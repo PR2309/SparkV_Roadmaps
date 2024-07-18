@@ -59,6 +59,7 @@ const SignUp = () => {
             return handleError('Passwords do not match');
         }
         try {
+            // const url = "http://localhost:3004/api/signup";
             const url = "https://sparkv-server.onrender.com/api/signup";
             const response = await fetch(url, {
                 method: "POST",

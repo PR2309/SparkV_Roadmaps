@@ -75,6 +75,7 @@ const Ai = () => {
       // if (validateDetails(User,age,days,language,question) == true) {
         document.getElementById("output_prompt").textContent = "Typing...";
       try {
+        // const response = await fetch("http://localhost:3004/ai/ans", {
         const response = await fetch("https://sparkv-server.onrender.com/ai/ans", {
           method: "POST",
           headers: {
@@ -144,7 +145,7 @@ const Ai = () => {
         <footer className="roadmapfooter">
     &copy;2024 All rights reserved to SparkV   
 
-    </footer>
+    </footer>        
       </div>
       
 
