@@ -105,7 +105,7 @@ const Ai = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <div className="aiPage">
       <div><Navbar /></div>
         <div>
@@ -141,11 +141,12 @@ const Ai = () => {
             </div>
           </main>
         </div>
-      </div>
-      <footer className="roadmapfooter">
+        <footer className="roadmapfooter">
     &copy;2024 All rights reserved to SparkV   
 
     </footer>
+      </div>
+      
 
     </div>
   );

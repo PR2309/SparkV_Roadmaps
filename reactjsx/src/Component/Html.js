@@ -5,13 +5,9 @@ import Navbar from './Navbar'
 
 const Html = () => {
   return (
-    <div>
-         
-      <div><Navbar/></div>
-        <div className="roadmap">
-      
-       
-      
+    <div className="htmlPage">
+        <div><Navbar/></div>         
+        <div className="roadmap container px-10"> 
             <div className="sidebar">
             <div    className='langname'   style={{color:'aqua'}} ><h1>Html</h1></div>
                 <div className="Topics"> <h3 style={{color:'grey'}} >TOPICS</h3></div>
