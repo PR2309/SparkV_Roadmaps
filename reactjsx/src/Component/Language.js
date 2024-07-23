@@ -195,7 +195,7 @@ const Language = () => {
 						<div>
 							<Link to="/Language/json" className="nav-link">
 								<div className="cards">
-									<i class="bi bi-braces" style={{ marginRight: '10px' }}></i>
+									<i className="bi bi-braces" style={{ marginRight: '10px' }}></i>
 									<h2 className="icon-name">JSON</h2>
 								</div>
 							</Link>
@@ -290,10 +290,11 @@ const Language = () => {
 						</div>
 					</div>
 				</div>
+				<footer className="roadmapfooter">
+					&copy;2024 All rights reserved to SparkV &nbsp;{" "}
+					<span className="heart-beat">❤️</span>
+				</footer>
 			</div>
-      <footer className="roadmapfooter">
-				&copy;2024 All rights reserved to SparkV
-			</footer>
 		</div>
 	);
 };

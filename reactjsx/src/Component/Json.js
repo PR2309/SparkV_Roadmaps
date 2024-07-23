@@ -7,7 +7,7 @@ const Json = () => {
     <div>
          <div><Navbar/></div>
 
-        <div className="roadmap">
+        <div className="roadmap container-fluid">
        
       
             <div className="sidebar">
@@ -61,7 +61,10 @@ const Json = () => {
                 ))}
             </div>
         </div>
-
+        <footer className="roadmapfooter">
+			&copy;2024 All rights reserved to SparkV &nbsp;{" "}
+			<span className="heart-beat">❤️</span>
+		</footer>
       
     </div>
   )

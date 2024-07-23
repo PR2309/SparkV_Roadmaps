@@ -19,11 +19,11 @@ const LandingPage = () => {
               learning and success. Take a look at the categories on our roadmap, dive into our carefully chosen
               materials, and start your journey toward a life-changing education with SparkV. This is where your path to exceptional learning begins.
             </p>
-            <img src="/Logo_.png" alt="SparkV" className="text-shadow py-2 pt-5" height="300rem"/>
+            <img src="/Logo_.png" alt="SparkV" className="langingPage_img text-shadow py-2 pt-5" height="300rem"/>
           </div>
           <footer className="lower">
             <Link to="/signup"><button className="custom-button rounded bg-secondary bg-gradient" title="Login">Let's Go</button></Link>
-            <img src="/tree_.png" style={{ marginTop: '2.5rem', height:'200px' }} alt="Tree"/>
+            <img src="/tree_.png" style={{ marginTop: '2.5rem', height:'200px' }} alt="Tree" className="landingPage_img"/>
           </footer>
         </section>
       </div>

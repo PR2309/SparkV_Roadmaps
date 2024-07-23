@@ -18,16 +18,16 @@ const Homepage = () => {
 				</div>
 				<section className="homesection">
 					<p>
-						<h1 className="s1">Your Journey to mastery starts here</h1>
+						<span className="s1 fs-1">Your Journey to mastery starts here</span>
 					</p>
 					<p className="s2">
-						<h4 className="s22">
+						<span className="s22 fs-4">
 							{" "}
 							<i>
 								Discover your path to success with SparkV's expertly designed
 								roadmaps. Here, we’re committed to transforming you from a coding novice to a true virtuoso. Our promise! Mastery of any language you choose. But remember, the secret ingredient lies in unwavering discipline on this journey. So buckle up, my friend, and let’s craft your coding saga!
 							</i>
-						</h4>
+						</span>
 					</p>
 				</section>
 			</div>
@@ -48,12 +48,12 @@ const Homepage = () => {
 					</div>
 				</div>
 			</div>
-			<h1 class="heading1">Dive into Our Roadmap</h1>
+			<h1 className="heading1">Dive into Our Roadmap</h1>
 
-			<div class="roadmap-container">
+			<div className="roadmap-container">
 				<div>
 					<Link to="/Language/cpp" className="nav-link">
-						<div class="roadmap-cpp">
+						<div className="roadmap-cpp">
 							<img src="/c.png" alt="C++" />
 							C++
 						</div>
@@ -62,7 +62,7 @@ const Homepage = () => {
 
 				<div>
 					<Link to="/Language/python" className="nav-link">
-						<div class="roadmap-python">
+						<div className="roadmap-python">
 							<img src="/python.png" alt="Python" />
 							Python
 						</div>
@@ -71,7 +71,7 @@ const Homepage = () => {
 
 				<div>
 					<Link to="/Language/react" className="nav-link">
-						<div class="roadmap-react">
+						<div className="roadmap-react">
 							<img src="/react.png" alt="React" />
 							React
 						</div>
@@ -80,7 +80,7 @@ const Homepage = () => {
 
 				<div>
 					<Link to="/Language/html" className="nav-link">
-						<div class="roadmap-html">
+						<div className="roadmap-html">
 							<img src="/html.png" alt="HTML" />
 							HTML
 						</div>
@@ -89,7 +89,7 @@ const Homepage = () => {
 
 				<div>
 					<Link to="/Language/cpp" className="nav-link">
-						<div class="roadmap-java">
+						<div className="roadmap-java">
 							<img src="/java.png" alt="Java" />
 							Java
 						</div>
@@ -97,7 +97,8 @@ const Homepage = () => {
 				</div>
 			</div>
 			<footer className="roadmapfooter">
-				&copy;2024 All rights reserved to SparkV
+				&copy;2024 All rights reserved to SparkV &nbsp;{" "}
+					<span className="heart-beat">❤️</span>
 			</footer>
 		</div>
 	);

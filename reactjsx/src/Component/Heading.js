@@ -3,7 +3,7 @@ import React from 'react'
 const Heading = () => {
   return (
     <div>
-      <div class="headingcontent">
+      <div className="headingcontent">
        <h2>RoaDmaP</h2>
         <h2>RoaDmaP</h2>
       

@@ -6,7 +6,7 @@ const Bootstraps = () => {
   return (
     <div>
       <div><Navbar/></div>
-      <div className="roadmap">
+      <div className="roadmap container-fluid">
         <div className="sidebar">
           <div className='langname' style={{color:'aqua'}}><h1>BOOTSTRAP</h1></div>
           <div className="Topics"><h3 style={{color:'grey'}}>TOPICS</h3></div>
@@ -51,6 +51,10 @@ const Bootstraps = () => {
           ))}
         </div>
       </div>
+      <footer className="roadmapfooter">
+					&copy;2024 All rights reserved to SparkV &nbsp;{" "}
+					<span className="heart-beat">❤️</span>
+			</footer>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const Dsa= () => {
     <div>
          <div><Navbar/></div>
 
-        <div className="roadmap">
+        <div className="roadmap container-fluid">
        
       
             <div className="sidebar">
@@ -61,8 +61,10 @@ const Dsa= () => {
                 ))}
             </div>
         </div>
-
-      
+        <footer className="roadmapfooter">
+			&copy;2024 All rights reserved to SparkV &nbsp;{" "}
+			<span className="heart-beat">❤️</span>
+		</footer>
     </div>
   )
 }
